@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.summary      = "An easier way to compose attributed strings"
   s.source       = { :git => "https://github.com/delba/TextAttributes.git", :tag => "v1.0" }
 
-  s.ios.deployment_target = "8.0"
+  s.ios.deployment_target = "11.0"
   s.osx.deployment_target = "10.10"
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
