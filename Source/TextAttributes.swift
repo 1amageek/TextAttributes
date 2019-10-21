@@ -144,7 +144,7 @@ open class TextAttributes {
     /// The ligature attribute.
     open var ligature: LigatureStyle {
         get {
-            if let int = dictionary[NSAttributedString.Key.ligature] as? Int, let ligature = LigatureStyle(rawValue: int) {
+            if let int = dictionary[NSAttributedString.Key.ligature] as? Int, let ligature: LigatureStyle = LigatureStyle(rawValue: int) {
                 return ligature
             } else {
                 return .default
@@ -152,7 +152,7 @@ open class TextAttributes {
         }
         
         set {
-            dictionary[NSAttributedString.Key.ligature] = NSNumber(value: newValue.hashValue)
+            dictionary[NSAttributedString.Key.ligature] = newValue.rawValue
         }
     }
     
@@ -768,14 +768,14 @@ open class TextAttributes {
     /// The vertical glyph form attribute.
     open var verticalGlyphForm: VerticalGlyphForm {
         get {
-            if let int = dictionary[NSAttributedString.Key.verticalGlyphForm] as? Int, let form = VerticalGlyphForm(rawValue: int) {
+            if let int = dictionary[NSAttributedString.Key.verticalGlyphForm] as? Int, let form: VerticalGlyphForm = VerticalGlyphForm(rawValue: int) {
                 return form
             } else {
                 return .horizontal
             }
         }
         set {
-            dictionary[NSAttributedString.Key.verticalGlyphForm] = NSNumber(value: newValue.hashValue)
+            dictionary[NSAttributedString.Key.verticalGlyphForm] = newValue.rawValue
         }
     }
     
